@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(48, 58, 54);
+    text-align: center;
+}
+
+h1 { 
+    font-size: 80px; 
+    color: white; 
+}
+
+div.fossil-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    perspective: 1000px; /* activer la 3D */
+}
+
+div.fossil-container:hover .fossil2 {
+    transform: rotateY(0deg);
+}
+
+div.fossil-container:hover .fossil1 {
+    transform: rotateY(-180deg);
+}
+
+img.fossil {
+    transition: transform 2s ease;
+    position: absolute;
+}
+
+img.fossil1 {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+img.fossil2 {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
